@@ -1,0 +1,11 @@
+[Desktop Entry]
+Encoding=UTF-8
+Version=1.0
+Type=Application
+Terminal=false
+Name=twitterwall-q1
+Exec=/opt/twitterwall-q1/bin/twitterwall-q1
+Icon=twitterwall-q164
+X-Window-Icon=
+X-HildonDesk-ShowInToolbar=true
+X-Osso-Type=application/x-executable
