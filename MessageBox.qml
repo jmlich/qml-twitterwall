@@ -3,9 +3,10 @@ import QtQuick 2.0
 Rectangle {
     id: stateExampleRect
     width: parent.width
-    height: (bigImageContainer.status === Image.Ready) ? 440 : 120
-    color: "#66204a87"
+    height: (bigImageContainer.status === Image.Ready) ? 420 : 100
+    color: "#6b8e9f"
     transformOrigin: Item.BottomLeft
+    radius: 10
 
     property string status_text
     property string user_name
@@ -30,8 +31,8 @@ Rectangle {
         anchors.left: parent.left;
         anchors.top: parent.top;
         anchors.margins: 20
-        width: 80
-        height: 80;
+        width: 60
+        height: 60;
         source: profile_picture
     }
 

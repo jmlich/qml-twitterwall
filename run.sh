@@ -1,4 +1,13 @@
 #!/bin/sh
-#~/Qt5.0.0/5.0.0/gcc/bin/qmlscene --fullscreen ./twitterWall.qml 
-~/Qt5.0.1/5.0.1/gcc/bin/qmlscene --fullscreen ./twitterWall.qml 
-#~/Qt5.0.1/5.0.1/gcc/bin/qmlscene ./twitterWall.qml 
+
+xset -dpms
+xset dpms off
+xset s noblank
+xset s off
+xset dpms force off
+
+#~/Qt5.0.2/5.0.2/gcc/bin/qmlscene ./twitterWall.qml 
+#killall gnome-screensaver
+#killall mate-screensaver
+#killall xscreensaver
+~/Qt5.0.2/5.0.2/gcc/bin/qmlscene --fullscreen ./twitterWall.qml 
