@@ -40,9 +40,14 @@
 ****************************************************************************/
 
 Qt.include("sha1.js");
-remove this line and add the keys
-var clientKey = "FIXME Consumer key";//Insert your own keys. Apparently we shouldn't be publishing them
-var clientSecret = "FIXME Consumer secret";
+
+var clientKey = "";//Insert your own keys. Apparently we shouldn't be publishing them
+var clientSecret = "";
+
+if (clientKey == "") {
+  console.log("ERROR: please add your client and secret key into OAuth.js");
+  Qt.quit();
+}
 
 function getValidator(resource, password)
 {
