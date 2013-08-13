@@ -40,8 +40,9 @@
 ****************************************************************************/
 
 Qt.include("sha1.js");
-var clientKey = "cw2HBODDurawbUcNfP58w";//Insert your own keys. Apparently we shouldn't be publishing them
-var clientSecret = "WeLpDT9OgDYJEXkY4KjA2suU7BVBVrVrXA2LUjdjFM";
+remove this line and add the keys
+var clientKey = "FIXME Consumer key";//Insert your own keys. Apparently we shouldn't be publishing them
+var clientSecret = "FIXME Consumer secret";
 
 function getValidator(resource, password)
 {
