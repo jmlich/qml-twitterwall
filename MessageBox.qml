@@ -1,3 +1,8 @@
+/**
+  * @author Jozef Mlich <xmlich02@stud.fit.vutbr.cz>
+  * @licence LGPL
+  */
+
 import QtQuick 2.0
 
 Rectangle {
