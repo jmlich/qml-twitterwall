@@ -9,7 +9,8 @@ Rectangle {
     id: stateExampleRect
     width: parent.width
     height: (bigImageContainer.status === Image.Ready) ? 440 : 120
-    color: "#66204a87"
+//    color: "#66204a87"
+    color: "#00ffffff"
     transformOrigin: Item.BottomLeft
 
     property string status_text

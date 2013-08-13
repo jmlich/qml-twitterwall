@@ -86,6 +86,7 @@ Rectangle {
 
 
     function download() {
+//return;
 
         if (!oauth.authorized) {
             oauth.beginAuthentication();
