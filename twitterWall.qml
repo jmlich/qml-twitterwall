@@ -44,17 +44,34 @@ Rectangle {
 
 
     Timer {
-        interval: 3000
+        interval: 30000
         repeat: true;
         running: true;
 //        running: false;
         onTriggered: {
             if (listView.currentIndex+1 == listModel.count) {
-                listView.positionViewAtBeginning();
                 download()
             } else {
                 listView.incrementCurrentIndex();
             }
+        }
+    }
+
+    Image {
+        id: busyIndicator
+        anchors.centerIn: parent;
+        source: "./images/progress.png"
+        visible: (listModel.count == 0) && (!oauth.pinVisible)
+        transformOrigin: Item.Center
+        RotationAnimation {
+            target: busyIndicator
+            property: "rotation" // Suppress a warning
+            from: 0
+            to: 360
+            direction: RotationAnimation.Clockwise
+            duration: 2000
+            loops: Animation.Infinite
+            running: true
         }
     }
 
@@ -86,8 +103,6 @@ Rectangle {
 
 
     function download() {
-//return;
-
         if (!oauth.authorized) {
             oauth.beginAuthentication();
             return;
@@ -99,7 +114,7 @@ Rectangle {
         var params = new Array();
         params.push(["q", "%23"+searchPhrase])
         params.push(["include_entities", "true"])
-        params.push(["count", "100"])
+        params.push(["count", "50"])
 
         var http = OAuthLogic.createOAuthHeader("GET", url, undefined, {"token":oauth.token, "secret":oauth.secret}, params);
 
@@ -123,8 +138,16 @@ Rectangle {
 //                            }
 
                         } else { // offline or error while downloading
-
-                            console.log("download() error " + http.status )
+                            if (http.status === 401) {
+                                oauth.secret = "";
+                                oauth.token = "";
+                                oauth.authorized = false;
+                                download()
+                                console.log("authentication failed")
+                            } else {
+                                console.log("download() error " + http.status )
+                                download();
+                            }
 
 
                         }
