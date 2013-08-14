@@ -4,6 +4,11 @@ phase was moved into 3rd party web browser.
 
 The taken parts of project could have different licence.
 
+Running of program:
+- get token from https://dev.twitter.com/
+- put keys into config.js.dist
+- mv config.js.dist config.js
+
 
 [1] http://gitorious.org/qt-qml-demo-playground/qt-qml-demo-playground/trees/master/twitter-oauth
 [2] http://quitcoding.com/?page=work#cinex
