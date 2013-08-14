@@ -1,4 +1,4 @@
-The twitter wall project is based on twitter-oauih [1], cinematic experience demo [2], and Qt5 launch
+The twitter wall project is based on twitter-oauth [1], cinematic experience demo [2], and Qt5 launch
 demo [3]. The Webkit3 (used in qt5) doesn't provide the javascript api at the moment. The authentication
 phase was moved into 3rd party web browser.
 
