@@ -1,4 +1,6 @@
 #!/bin/sh
+# @author Jozef Mlich <xmlich02@stud.fit.vutbr.cz>
+# @licence LGPL
 
 ## disable screensaver
 
