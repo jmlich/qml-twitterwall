@@ -40,12 +40,10 @@
 ****************************************************************************/
 
 Qt.include("sha1.js");
-
-var clientKey = "";//Insert your own keys. Apparently we shouldn't be publishing them
-var clientSecret = "";
+Qt.include("config.js");
 
 if (clientKey == "") {
-  console.log("ERROR: please add your client and secret key into OAuth.js");
+  console.log("ERROR: please add your client and secret key into config.js");
   Qt.quit();
 }
 
