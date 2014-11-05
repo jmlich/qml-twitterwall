@@ -1,8 +1,9 @@
 /**
-  * @author Jozef Mlich <xmlich02@stdu.fit.vutbr.cz>
+  * @author Jozef Mlich <xmlich02@stud.fit.vutbr.cz>
   * @licence LGPL
   */
 
+// import QtQuick 1.0 // to target S60 5th Edition or Maemo 5
 import QtQuick 2.0
 import QtQuick.LocalStorage 2.0
 

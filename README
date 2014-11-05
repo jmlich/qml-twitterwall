@@ -9,6 +9,9 @@ Running of program:
 - put keys into config.js.dist
 - mv config.js.dist config.js
 
+- there is additionally partners (to add addvertisments for them) and schedule api. Currently, there is
+no public generator of those files. You can find examples of those in in ./api folder.
+
 
 [1] http://gitorious.org/qt-qml-demo-playground/qt-qml-demo-playground/trees/master/twitter-oauth
 [2] http://quitcoding.com/?page=work#cinex

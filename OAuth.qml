@@ -49,9 +49,6 @@ Item{
     height: 768
     property string token;
     property string secret;
-
-    property alias pinVisible: pinTextInput.visible
-
     function beginAuthentication(){
         if (token !== "" && secret !== "") {
             authorized = "";
